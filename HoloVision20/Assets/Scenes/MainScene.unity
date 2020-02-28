@@ -240,10 +240,10 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 128
+  m_FontSize: 64
   m_FontStyle: 0
   m_RichText: 0
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: e869342c56e54acf989b2422b4b80dcc, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -264,7 +264,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: e869342c56e54acf989b2422b4b80dcc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,8 +311,8 @@ MonoBehaviour:
   aspectV: 1
   ignoreAngleClamp: 0
   ignoreDistanceClamp: 0
-  useFixedVerticalPosition: 0
-  fixedVerticalPosition: -0.4
+  useFixedVerticalPosition: 1
+  fixedVerticalPosition: -0.3
   orientToReferenceDirection: 0
 --- !u!114 &108240258
 MonoBehaviour:
@@ -499,6 +499,8 @@ MonoBehaviour:
   GPU: 0
   StatusBlock: {fileID: 108240255}
   ProbabilityThreshold: 0.6
+  ToolTipPrefab: {fileID: 114071207091359978, guid: afaef0108a478c44a9eac26658bc29bf,
+    type: 3}
 --- !u!4 &404633361
 Transform:
   m_ObjectHideFlags: 0

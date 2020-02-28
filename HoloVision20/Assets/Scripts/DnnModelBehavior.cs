@@ -1,4 +1,5 @@
 ﻿using HoloToolkit.Unity;
+using Microsoft.MixedReality.Toolkit.UI;
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class DnnModelBehavior : MonoBehaviour
 
     public TextMesh StatusBlock;
     public float ProbabilityThreshold = 0.6f;
+    public ToolTip ToolTipPrefab;
 
     async void Start()
     {
