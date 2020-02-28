@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\Enlistments\\WinMLExperiments\\HoloVision20\\Assets\\MixedRealityToolkit.Providers\\WindowsMixedReality\\Shared\\DotNetAdapter\\DotNetAdapter.csproj": {}
+  },
+  "projects": {
+    "H:\\Enlistments\\WinMLExperiments\\HoloVision20\\Assets\\MixedRealityToolkit.Providers\\WindowsMixedReality\\Shared\\DotNetAdapter\\DotNetAdapter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\Enlistments\\WinMLExperiments\\HoloVision20\\Assets\\MixedRealityToolkit.Providers\\WindowsMixedReality\\Shared\\DotNetAdapter\\DotNetAdapter.csproj",
+        "projectName": "DotNetAdapter",
+        "projectPath": "H:\\Enlistments\\WinMLExperiments\\HoloVision20\\Assets\\MixedRealityToolkit.Providers\\WindowsMixedReality\\Shared\\DotNetAdapter\\DotNetAdapter.csproj",
+        "packagesPath": "C:\\Users\\cre8i\\.nuget\\packages\\",
+        "outputPath": "H:\\Enlistments\\WinMLExperiments\\HoloVision20\\Assets\\MixedRealityToolkit.Providers\\WindowsMixedReality\\Shared\\DotNetAdapter\\.obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "H:\\Enlistments\\WinMLExperiments\\HoloVision20\\Assets\\NuGet.Config",
+          "C:\\Users\\cre8i\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net46"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/UnityDeveloperTools/MSBuildForUnity/_packaging/UnityDeveloperTools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net46": {
+          "dependencies": {
+            "Microsoft.Windows.MixedReality.DotNetWinRT": {
+              "suppressParent": "Analyzers",
+              "target": "Package",
+              "version": "[0.5.1045, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

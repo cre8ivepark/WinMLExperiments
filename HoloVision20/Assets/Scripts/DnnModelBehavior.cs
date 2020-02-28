@@ -11,7 +11,7 @@ public class DnnModelBehavior : MonoBehaviour
     private MediaCapturer _mediaCapturer;
     private TextToSpeech _tts;
     private UserInput _user;
-
+    private string _speechText;
     private string _previousDominantResult;
     private bool _isRunning = false;
 
@@ -83,6 +83,14 @@ public class DnnModelBehavior : MonoBehaviour
         }
     }
 
+    public void SayLastSeenObject()
+    {
+        if (_tts != null && !_tts.IsSpeaking())
+        {
+            _tts.StartSpeaking(_speechText);
+        }
+    }
+
 #if ENABLE_WINMD_SUPPORT
     private async Task EvaluateFrame(Windows.Media.VideoFrame videoFrame)
     {
@@ -109,18 +117,18 @@ public class DnnModelBehavior : MonoBehaviour
                     // Prepare strings for text and update labels
                     var deviceKind = GPU ? "GPU" : "CPU";
                     var labelText = $"Predominant objects detected in {result.ElapsedMilliseconds,3:f0}ms on {deviceKind}\n {result.TopResultsFormatted}";
-                    var speechText = string.Format("This {0} a {1} {2} in front of you", 
+                    _speechText = string.Format("This {0} a {1} {2} in front of you", 
                         result.DominantResultProbability > ProbabilityThreshold ? "is likely" : "might be", 
                         result.DominantResultLabel, 
                         distMessage);
                     StatusBlock.text = labelText;
 
                     // Check if the previous result was the same and only progress further if not to avoid a loop of same audio
-                    if (!_tts.IsSpeaking() && result.DominantResultLabel != _previousDominantResult)
-                    {
-                        _tts.StartSpeaking(speechText);
-                        _previousDominantResult = result.DominantResultLabel;
-                    }
+                    //if (!_tts.IsSpeaking() && result.DominantResultLabel != _previousDominantResult)
+                    //{
+                    //    _tts.StartSpeaking(_speechText);
+                    //    _previousDominantResult = result.DominantResultLabel;
+                    //}
                 }, false);
             }
         }
